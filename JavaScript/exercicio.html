@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>exercicios3103</title>
+</head>
+<body>
+   <h2>cadastro professores</h2>
+   <form name="CadProf" action="" onsubmit="return criticacampos()">
+    <label for="matprof">matricula do professor:</label><br>
+    <input type="text" name="matprof"><br><br>
+    <label for="nomprof">nome do professor:</label><br>
+    <input type="text" name="nomprof"><br><br>
+    <label for="curprof"> curso do professor:</label><br>
+    <input type="text" name="curprof"><br><br>
+    <label for="disprof">disciplina do professor :</label><br>
+    <input type="text" name="disprof"><br><br>
+    <input type="submit" value="enviar"><br><br>
+
+   </form>
+
+   <button type="button" onclick="limpacampos()" onmouseover="mostrartexto(this)" onmouseout="apaga texto(this)">????</button>
+
+
+
+   
+    <script>
+        function criticacampos() {
+
+            if (document.forms ["CadProf"] ["matprof"].value == "") {
+                alert('matricula do professor nao pode fica vazio')
+                return false
+
+
+    }       else if (document.forms ["CadProf"] ["nomprof"].value == "") {
+                alert('nome do professor nao pode ficar vazio')
+                return false
+    }
+            else if (document.forms ["CadProf"] ["curprof"].value == "") {
+                alert('o curso do professor nao pode ficar vazio')
+                return false
+    }
+            else if (document.forms ["CadProf"] ["disprof"].value == "") {
+                alert('a disciplina do professor nao pode ficar vazio')
+                return false
+    }
+            else
+                alert('todos os dados estao preenchidos.serao enviados para o SGBD !')
+                return true
+}
+
+    </script>
+</body>
+
+</html>
